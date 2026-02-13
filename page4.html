@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Level 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      background: url('hearts-bg.png') repeat;
+    }
+    h1 { font-size: 32px; color: red; }
+    h2 { font-size: 20px; color: hotpink; }
+    button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background: grey;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <h1>LEVEL 4</h1>
+  <h2>Will you be my Valentine? 💖</h2>
+  <button onclick="goToPage5()">Yes</button>
+  <button disabled>No</button>
+
+  <audio id="yesSound" src="level-up.mp3"></audio>
+
+  <script>
+    function goToPage5() {
+      document.getElementById('yesSound').play();
+      setTimeout(() => {
+        window.location.href = "page5.html";
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
