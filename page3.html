@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Level 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body { text-align: center; font-family: 'Press Start 2P', cursive; background: url('hearts-bg.png') repeat; }
+    h1 { font-size: 32px; color: red; }
+    .envelope { width: 150px; height: 100px; background: pink; border: 3px solid hotpink; margin: 20px auto; cursor: pointer; }
+    .content { display: none; margin-top: 20px; }
+    .frame { border: 5px solid hotpink; padding: 10px; margin: 10px; display: inline-block; }
+    .hearts { animation: float 3s infinite; color: red; font-size: 24px; }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>LEVEL 3</h1>
+
+  <!-- Envelope 1 -->
+  <div class="envelope" onclick="showContent('content1')">💌 Envelope 1</div>
+  <div id="content1" class="content">
+    <h2>Our Memories ❤️</h2>
+    <p class="hearts">💖 💕 💖</p>
+    <div class="frame"><img src="photo1.jpg" width="200"></div>
+    <div class="frame"><video width="200" controls><source src="video1.mp4"></video></div>
+    <!-- Add 5 photos + 5 videos here -->
+  </div>
+
+  <!-- Envelope 2 -->
+  <div class="envelope" onclick="showContent('content2')">💌 Envelope 2</div>
+  <div id="content2" class="content">
+    <h2>Our Songs 🎶</h2>
+    <div class="frame">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/uYHNdTPV7pM?si=7apqVUx09cI2X_b_" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="frame">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/U8F5G5wR1mk?si=9NCh8Ua9_gBFTfG-" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- Add Eyes Blue x Heather + Hide by Juice WRLD here -->
+  </div>
+
+  <!-- Envelope 3 -->
+  <div class="envelope" onclick="showContent('content3')">💌 Envelope 3</div>
+  <div id="content3" class="content">
+    <h2>My Love Letter 💍❤️</h2>
+    <p>
+      From the day (22 Feb 2022) that I met you I knew you were the one for me...  
+      24 Sep 2024 you asked me to be your girlfriend officially...  
+      Forever Yours, <br>  
+      <strong>LINDIWE DEDA ❤️💍🌍</strong>
+    </p>
+  </div>
+
+  <audio id="coinSound" src="coin.mp3"></audio>
+
+  <script>
+    function showContent(id) {
+      document.getElementById('coinSound').play();
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
